@@ -2,9 +2,20 @@ spring:
   application:
     name: kindergarten
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: Himym2603@2603
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: Himym2603@2603
+    url: jdbc:postgresql://ep-flat-sky-a10m25wu.ap-southeast-1.aws.neon.tech/kindergarten
+    username: kindergarten_owner
+    password: PEe5vW8ILhqb
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog-master.xml
+
+
+
 
