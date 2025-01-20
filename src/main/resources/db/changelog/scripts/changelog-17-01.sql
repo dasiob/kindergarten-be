@@ -1,5 +1,4 @@
 -- changeset liam:001-initial-setup
-DROP TABLE IF EXISTS public.user_info;
 CREATE TABLE public.user_info (
     user_id SERIAL PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL UNIQUE,
